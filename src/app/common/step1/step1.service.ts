@@ -85,7 +85,7 @@ export class Step1Service {
     private retrieveModels(): Observable<Model[]> {
         return this.carService.retrieveModels()
             .pipe(
-                retry(), // needed as the mock system is not directly available at app launch, nor on init of step1 component
+                retry(10), // needed as the mock system is not directly available at app launch, nor on init of step1 component
             );
     }
 
