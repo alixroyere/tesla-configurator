@@ -1,0 +1,32 @@
+<h1>Step 3: Summary</h1>
+<h2>Your {{modelAndColor.model?.description}}</h2>
+<table>
+    <tbody>
+    <tr id="configSummary">
+        <th scope="row">{{configurationAndOptions.config?.description}}</th>
+        <td>{{configurationAndOptions.config?.price | currency}}</td>
+    </tr>
+    <tr id="configDetails">
+        <td>Range: {{configurationAndOptions.config?.range}} miles - Max
+            speed: {{configurationAndOptions.config?.speed}}</td>
+    </tr>
+    <tr id="colorSummary">
+        <th scope="row">{{modelAndColor.color?.description}} Color</th>
+        <td>{{modelAndColor.color?.price | currency}}</td>
+    </tr>
+    <tr *ngIf="configurationAndOptions.towHitch" id="towHitchSummary">
+        <th scope="row">Tow Hitch Package</th>
+        <td>{{1000 | currency}}</td>
+    </tr>
+    <tr *ngIf="configurationAndOptions.yoke" id="yokeSummary">
+        <th scope="row">Yoke Package</th>
+        <td>{{1000 | currency}}</td>
+    </tr>
+    </tbody>
+    <tfoot>
+    <tr id="totalCostSummary">
+        <th scope="row">TOTAL COST</th>
+        <td>{{totalPrice | currency}}</td>
+    </tr>
+    </tfoot>
+</table>

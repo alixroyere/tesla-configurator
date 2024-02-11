@@ -1,0 +1,9 @@
+<div>
+    <button [routerLink]="[Route.Step1]" id="step1">Step 1</button>
+    <button [routerLink]="[Route.Step2]" id="step2" [disabled]="shouldDisableStep2()">
+        Step 2
+    </button>
+    <button [routerLink]="[Route.Step3]" id="step3" [disabled]="shouldDisableStep3()">
+        Step 3
+    </button>
+</div>

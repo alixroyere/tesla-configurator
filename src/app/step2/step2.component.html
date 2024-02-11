@@ -1,0 +1,30 @@
+<h1>Step 2: Select your config and options</h1>
+
+<form [formGroup]="form">
+    <div>
+        <label for="configSelect">Config:</label>
+        <select id="configSelect" formControlName="config" [compareWith]="compareConfigFn">
+            <option [ngValue]="null">Choose...</option>
+            <option *ngFor="let config of options()?.configs; trackBy:trackById"
+                    [ngValue]="config"
+            >
+                {{config.description}}
+            </option>
+        </select>
+    </div>
+
+    <div *ngIf="form.controls.config.valid" id="configInformation">
+        Range: {{ form.controls.config.value?.range }} miles - Max speed: {{form.controls.config.value?.speed}} -
+        Cost: {{form.controls.config.value?.price | currency}}
+    </div>
+
+    <div *ngIf="!form.controls.towHitch.disabled">
+        <input type="checkbox" id="includeTow" formControlName="towHitch" checked/>
+        <label for="includeTow">Tow hitch?</label>
+    </div>
+
+    <div *ngIf="!form.controls.yoke.disabled">
+        <input type="checkbox" id="includeYoke" formControlName="yoke"/>
+        <label for="includeYoke">Yoke steering wheel? </label>
+    </div>
+</form>
