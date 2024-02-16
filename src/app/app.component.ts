@@ -1,6 +1,6 @@
 import {ChangeDetectionStrategy, Component, Signal} from '@angular/core';
 import {RouterOutlet} from "@angular/router";
-import {StepNavigatorComponent} from "@tesla/step-navigator/step-navigator.component";
+import {StepNavigatorComponent} from "@tesla/common/routing/step-navigator/step-navigator.component";
 import {NgIf, NgOptimizedImage} from "@angular/common";
 import {Step1Service} from "@tesla/common/step1/step1.service";
 

@@ -1,5 +1,5 @@
 import {ChangeDetectionStrategy, Component, Signal, TrackByFunction} from "@angular/core";
-import {NgForOf, NgIf, NgOptimizedImage} from "@angular/common";
+import {NgForOf, NgIf} from "@angular/common";
 import {FormGroup, ReactiveFormsModule} from "@angular/forms";
 import {Color, Model} from "@tesla/common/car/model";
 import {Step1Service} from "@tesla/common/step1/step1.service";
@@ -14,7 +14,6 @@ import {Step2Service} from "@tesla/common/step2/step2.service";
         ReactiveFormsModule,
         NgForOf,
         NgIf,
-        NgOptimizedImage
     ],
     templateUrl: "./step1.component.html",
     changeDetection: ChangeDetectionStrategy.OnPush

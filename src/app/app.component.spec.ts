@@ -1,7 +1,7 @@
 import {ComponentFixture, TestBed} from '@angular/core/testing';
 import {AppComponent} from './app.component';
 import {Component, signal, WritableSignal} from "@angular/core";
-import {StepNavigatorComponent} from "@tesla/step-navigator/step-navigator.component";
+import {StepNavigatorComponent} from "@tesla/common/routing/step-navigator/step-navigator.component";
 import {Step1Service} from "@tesla/common/step1/step1.service";
 import SpyObj = jasmine.SpyObj;
 
